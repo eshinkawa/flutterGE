@@ -9,7 +9,7 @@ import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
-import com.globo.video.player.Player;
+// import com.globo.video.player.Player;
 
 public class MainActivity extends FlutterActivity {
   private static final String CHANNEL = "com.example.feedflutterge";
@@ -17,7 +17,7 @@ public class MainActivity extends FlutterActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Player.initialize(this);
+    // Player.initialize(this);
     GeneratedPluginRegistrant.registerWith(this);
 
     new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(new MethodChannel.MethodCallHandler() {
@@ -34,10 +34,10 @@ public class MainActivity extends FlutterActivity {
   }
 
   public void showPlayer(int videoId) {
-    // INFO: function implementation
-    Log.i("tag", "Chamando intent de video");
-    Intent intent = new Intent(MainActivity.this, PlayerActivity.class);
-    intent.putExtra("videoId", videoId);
-    startActivity(intent);
+    // // INFO: function implementation
+    // Log.i("tag", "Chamando intent de video");
+    // Intent intent = new Intent(MainActivity.this, PlayerActivity.class);
+    // intent.putExtra("videoId", videoId);
+    // startActivity(intent);
   }
 }
