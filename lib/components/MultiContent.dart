@@ -1,12 +1,15 @@
+import 'dart:async';
+import 'dart:convert';
+
+import 'package:Flutter_GE/AppConfig.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
-import 'dart:convert';
-import 'dart:async';
 import 'package:http/http.dart' as http;
 
 class MultiContent extends StatefulWidget {
   MultiContent({@required this.data});
   final data;
+
   @override
   MultiContentState createState() => new MultiContentState();
 }
@@ -14,10 +17,8 @@ class MultiContent extends StatefulWidget {
 class MultiContentState extends State<MultiContent> {
   @override
   var content = {};
-  var url =
-      'http://falkor-cda.bastian.globo.com/feeds/93a4eb4b-8a93-4c09-b080-4ba92a01d142/posts/ssi';
-
-  String baseRawUrl = 'http://globoesporte.globo.com/globo/raw/';
+  String url;
+  String baseRawUrl;
 
   Future<Null> fetchFeed(url) async {
     var response = await http.get(url);
@@ -49,6 +50,9 @@ class MultiContentState extends State<MultiContent> {
 
   @override
   Widget build(BuildContext context) {
+    url = AppConfig.of(context).apiEndpoint;
+    baseRawUrl = AppConfig.of(context).host;
+
     return MaterialApp(
       theme: ThemeData(fontFamily: 'OpenSans'),
       home: Scaffold(

@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+
+import './RegularCard.dart';
 import './TempoReal.dart';
 import './VideoCard.dart';
-import './RegularCard.dart';
+
 class FeedCard extends StatelessWidget {
-  FeedCard({@required this.index, @required this.onPressPlayer, @required this.onPress, @required this.data});
+  FeedCard(
+      {@required this.index,
+      @required this.onPressPlayer,
+      @required this.onPress,
+      @required this.data});
 
   final index;
   final Function onPressPlayer;

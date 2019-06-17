@@ -4,13 +4,6 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (BottomNavigationBar(
-      // onTap: (currentIndex) {
-      //   _scrollController.animateTo(
-      //     0.0,
-      //     curve: Curves.easeOut,
-      //     duration: const Duration(milliseconds: 300),
-      //   );
-      // },
       type: BottomNavigationBarType.fixed,
       currentIndex: 0,
       items: [
