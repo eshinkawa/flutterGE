@@ -7,7 +7,7 @@ class FeedModel {
 
   FeedModel(this.id, this.imageUrl, this.section, this.summary, this.title);
 
-  FeedModel.fromJson(Map<String, dynamic> parsedJson){
+  FeedModel.fromJson(Map<String, dynamic> parsedJson) {
     id = parsedJson['id'];
     imageUrl = parsedJson['imageUrl'];
     section = parsedJson['section'];

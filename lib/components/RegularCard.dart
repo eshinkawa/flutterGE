@@ -62,7 +62,8 @@ class RegularCard extends StatelessWidget {
               ),
             ),
           ),
-          Image.network(data['content']['image']['sizes']['M']['url'], fit: BoxFit.cover),
+          Image.network(data['content']['image']['sizes']['M']['url'],
+              fit: BoxFit.cover),
           Container(
             margin: const EdgeInsets.fromLTRB(24.0, 12.0, 24.0, 12.0),
             child: Text(
